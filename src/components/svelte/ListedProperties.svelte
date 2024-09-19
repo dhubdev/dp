@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { iListing } from "$lib/modules/interface";
+  import { sublineClasses } from "$lib/modules/constants";
   import Listing from "./cards/Listing.svelte";
   import { Button } from "../ui/button";
 
@@ -58,11 +59,9 @@
 <div class="flex flex-col gap-4">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div>
-      <h2>Assisting individuals in locating the appropriate real estate.</h2>
-      <p>
-        At DHUB PROPERTY, we guide clients through every step of their real
-        estate journey, ensuring they find the perfect property that aligns with
-        their unique needs and aspirations.
+      <h2 class={`${sublineClasses} text-start`}>Property Listing</h2>
+      <p class="text-muted-foreground">
+        Where comfort meets style - your next home, today.
       </p>
     </div>
     <div class="flex items-center justify-center md:justify-end gap-2">

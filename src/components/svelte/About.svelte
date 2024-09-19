@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { sublineClasses } from "$lib/modules/constants";
   import SmartHome from "./icons/SmartHome.svelte";
   import User from "./icons/User.svelte";
 
@@ -10,13 +11,15 @@
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-  <div class="flex flex-col">
-    <h2>Assisting individuals in locating the appropriate real estate.</h2>
-    <p>
-      At DHUB PROPERTY, we guide clients through every step of their real estate
-      journey, ensuring they find the perfect property that aligns with their
-      unique needs and aspirations.
-    </p>
+  <div class="flex flex-col gap-4">
+    <div>
+      <h2 class={`${sublineClasses} text-start`}>Assisting individuals in locating the appropriate real estate.</h2>
+      <p>
+        At DHUB PROPERTY, we guide clients through every step of their real estate
+        journey, ensuring they find the perfect property that aligns with their
+        unique needs and aspirations.
+      </p>
+    </div>
     <div class="flex flex-col gap-4">
       <div
         class="grid grid-cols-[56px_1fr] md:grid-cols-[64px_1fr] items-center gap-4"
