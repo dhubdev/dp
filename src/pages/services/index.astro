@@ -1,9 +1,15 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
+import Hero from "$lib/components/astro/Hero.astro";
+import ServiceList from "$lib/components/svelte/ServiceList.svelte";
 ---
 
 <Layout title="Services | DHUB Property">
-	<div class="center">
-    <h2>Services</h2>
+  <div class="center flex flex-col gap-4">
+    <Hero
+      title="Our Services"
+      subline="Exceptional Solutions Tailored to Your Needs – Redefining Real Estate with Expertise and Care."
+    />
+    <ServiceList client:load />
   </div>
 </Layout>
