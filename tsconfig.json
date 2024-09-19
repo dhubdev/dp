@@ -1,0 +1,20 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "$lib/*": ["./src/*"]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "svelte", // or your preferred framework like 'react', 'preact', etc.
+    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.astro", "src/**/*.svelte", "src/**/*.vue", "src/**/*.jsx", "src/**/*.tsx"]
+}
+

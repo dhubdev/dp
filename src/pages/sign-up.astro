@@ -1,0 +1,11 @@
+---
+import AuthLayout from "$lib/layouts/AuthLayout.astro";
+import { SignIn as SignInComponent } from "@clerk/astro/components";
+---
+
+
+<AuthLayout title="EmpowerKidz">
+  <div class="w-full h-full flex items-center justify-center">
+    <SignInComponent />
+  </div>
+</AuthLayout>

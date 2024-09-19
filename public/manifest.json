@@ -1,0 +1,52 @@
+{
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "scope": "/",
+  "start_url": "/",
+  "name": "DHUB Property",
+  "short_name": "DHUB Property",
+  "description": "Your premier destination for housing solutions",
+  "icons": [
+      {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/android-chrome-256x256.png",
+          "sizes": "256x256",
+          "type": "image/png"
+      },
+      {
+          "src": "/android-chrome-384x384.png",
+          "sizes": "384x384",
+          "type": "image/png"
+      },
+      {
+          "src": "/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ],
+  "screenshots": [
+      {
+          "src": "/screenshot-wide.webp",
+          "sizes": "1920x1080",
+          "type": "image/webp",
+          "form_factor": "wide"
+      },
+      {
+          "src": "/screenshot-mobile.webp",
+          "sizes": "1080x1920",
+          "type": "image/webp",
+          "form_factor": "narrow"
+      },
+      {
+          "src": "/screenshot-mobile.webp",
+          "sizes": "1080x1920",
+          "type": "image/webp"
+      }
+  ]
+}

@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from "$lib/components/astro/Hero.astro";
+import AboutSections from "$lib/components/svelte/AboutSections.svelte"
+---
+
+<Layout title="About | DHUB Property">
+	<div>
+		<Hero
+      class="center"
+			title="About DHUB Property"
+			subline="Transforming Real Estate Experiences with Excellence, Innovation, and Integrity."
+		/>
+    <AboutSections client:visible />
+  </div>
+</Layout>

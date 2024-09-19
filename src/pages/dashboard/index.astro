@@ -1,0 +1,10 @@
+---
+import EditorJS from "$lib/components/svelte/widgets/EditorJS.svelte"
+import Layout from "$lib/layouts/Layout.astro"
+---
+
+<Layout title="Dashboard">
+  <section>
+    <EditorJS client:only="svelte" />
+  </section>
+</Layout>

@@ -1,0 +1,15 @@
+---
+import { getEntry } from "astro:content"; 
+
+const { id } = Astro.params;
+
+const entry = await getEntry("legal", id as any);
+
+if (entry === undefined) {
+  return Astro.redirect("/404");
+}
+
+const { Content, headings } = await entry.render();
+---
+ 
+<Content />

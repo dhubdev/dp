@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomepageHero from '$lib/components/svelte/HomepageHero.svelte';
+import USPS from '$lib/components/svelte/USPS.svelte'
+import About from '$lib/components/svelte/About.svelte'
+import ListedProperties from '$lib/components/svelte/ListedProperties.svelte';
+import Services from '$lib/components/svelte/Services.svelte';
+---
+
+<Layout title="DHUB Property">
+	<div class="hero relative bg-lightgray dark:bg-background">
+    <div class="center">
+      <HomepageHero client:load />
+    </div>
+  </div>
+  <div>
+    <div class="center">
+      <USPS client:load />
+    </div>
+  </div>
+  <div>
+    <div class="center">
+      <About client:load />
+    </div>
+  </div>
+  <div>
+    <div class="center">
+      <ListedProperties client:load />
+    </div>
+  </div>
+  <div>
+    <div class="center">
+      <Services client:load />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/bg_2048x1367.webp"); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Ensure it stays behind the content */
+  }
+</style>
