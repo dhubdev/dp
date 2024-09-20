@@ -1,0 +1,19 @@
+---
+layout: ../../layouts/ServiceLayout.astro
+active: true
+name: Construction
+subline: Building your dream home from the ground up. Trust DHUB Property to turn your vision into reality.
+image: /services/construction_2048x825.webp
+---
+
+import MDX from "../../components/svelte/cards/MDX.svelte"
+
+Whether you're looking to make minor touch-ups or embark on a complete overhaul, our team of skilled professionals is committed to delivering exceptional results. With years of experience and a keen eye for detail, we approach every project with precision and passion.
+
+  <MDX props={[
+    {
+      name: "Let us build you your dream house",
+      content: "<p>Are you envisioning the perfect home, tailored to your desires and needs? Look no further. At DHub Property, we specialize in crafting bespoke homes from the ground up, meticulously curated to reflect your unique vision.</p><p>With our seasoned construction team by your side, you'll embark on a seamless journey from conception to completion. From the initial blueprint to the final walk-through, we prioritize quality craftsmanship and unwavering attention to detail at every turn.</p><p>Why settle for anything less than your dream home? Trust DHub Property to bring it to life. Let's build something extraordinary together.</p>",
+      image: "/services/constructions/construction.webp"
+    },
+  ]} client:load />

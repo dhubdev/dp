@@ -18,12 +18,12 @@ const { name, subline } = frontmatter;
 ---
 
 <Layout title={name}>
-  <section class="flex flex-col gap-4 w-full center">
+  <section class="flex flex-col gap-4 w-full md:center">
 		<Hero
 			title={name}
 			subline={subline}
 		/>
-    <main class="flex flex-col gap-8">
+    <main class="flex flex-col gap-8 px-4 md:px-0">
       <slot />
     </main>
   </section>
