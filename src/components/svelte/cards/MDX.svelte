@@ -4,6 +4,8 @@
 
   export let props: iServiceCard[] = [];
   const { content, image, name } = props[0]
+
+  const style = `background:url(${image}) no-repeat;background-size:cover;background-position:center`
 </script>
 
 <div>
@@ -14,8 +16,8 @@
       {/each}
     </div>
   {:else}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <img src={image} alt={name}/>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+      <div {style} class="h-full" />
       <div class="prose dark:prose-invert">
         <h2>{name}</h2>
         {@html content}
