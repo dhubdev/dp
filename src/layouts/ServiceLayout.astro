@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import Hero from "$lib/components/astro/Hero.astro";
+import ContactBtns from "$lib/components/svelte/ContactBtns.svelte"
 
 interface Frontmatter {
   name: string;
@@ -25,6 +26,7 @@ const { name, subline } = frontmatter;
 		/>
     <main class="flex flex-col gap-8 px-4 md:px-0">
       <slot />
+      <ContactBtns client:load />
     </main>
   </section>
 </Layout>
