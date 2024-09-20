@@ -17,7 +17,7 @@
     </div>
   {:else}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
-      <div {style} class="h-full" />
+      <div {style} class="aspect-video w-full md:aspect-auto md:h-full" />
       <div class="prose dark:prose-invert">
         <h2>{name}</h2>
         {@html content}
