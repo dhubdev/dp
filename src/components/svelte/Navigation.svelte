@@ -47,7 +47,7 @@
   const secondaryClass = buttonVariants({ variant: "secondary" })
 </script>
 
-<div class="hidden lg:flex items-center gap-2">
+<div class="hidden md:flex items-center gap-2">
   {#if mounted}
     {#each navLinks as { name, href } (href)}
       <Button
