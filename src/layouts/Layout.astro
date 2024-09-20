@@ -92,7 +92,7 @@ const { title } = Astro.props;
 	<body class="bg-lightpaper dark:bg-background">
 		<ModeWatcher client:load />
 		<Header />
-		<section>
+		<section class="overflow-hidden">
 			<slot />
 		</section>
 		<Footer />
