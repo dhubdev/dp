@@ -1,0 +1,29 @@
+---
+layout: ../../layouts/ServiceLayout.astro
+active: true
+name: Renovation / Refurbishing
+subline: Transform your space into the home of your dreams with expert renovation services that bring your vision to life, from minor touch-ups to complete overhauls.
+image: /services/renovation_1920x1080.webp
+---
+
+import MDX from "../../components/svelte/cards/MDX.svelte"
+
+Whether you're looking to make minor touch-ups or embark on a complete overhaul, our team of skilled professionals is committed to delivering exceptional results. With years of experience and a keen eye for detail, we approach every project with precision and passion.
+
+  <MDX props={[
+    {
+      name: "Kitchen and Bathroom Renovations",
+      content: "Upgrade your home with a stunning new kitchen or bathroom. Our experienced team can help you design and install the perfect space that fits your lifestyle and budget.",
+      image: "/services/renovations/kitchen-bathroom-renovation.webp"
+    },
+    {
+      name: "Whole Home Remodels",
+      content: "Transform your entire home with our whole-home remodeling services. We can help you reimagine your living space and create a functional and beautiful environment that you'll love.",
+      image: "/services/renovations/whole-home-remodels.webp"
+    },
+    {
+      name: "Flooring & Tiling",
+      content: "DHUB Property offers expert flooring and tiling services, enhancing spaces with precision installation of tiles, hardwood, and laminate for durable, elegant finishes.",
+      image: "/services/renovations/flooring-tiling.webp"
+    }
+  ]} client:load />

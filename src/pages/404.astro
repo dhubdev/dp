@@ -1,0 +1,13 @@
+---
+import Binoculars from "$lib/components/astro/Binoculars.astro";
+import Layout from "../layouts/Layout.astro";
+import { Button } from "$lib/components/ui/button";
+
+---
+<Layout title="Not Found">
+  <section aria-label="page not found" class="flex flex-col justify-center items-center gap-4 center">
+    <Binoculars />
+    <h1>🥹 Sorry!!! The page could not found</h1>
+    <Button href="/">Homepage</Button>
+  </section>
+</Layout>

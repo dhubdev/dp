@@ -1,27 +1,16 @@
 ---
-import Layout from "$lib/layouts/Layout.astro";
-import Hero from "$lib/components/astro/Hero.astro";
-import { services } from "$lib/modules/constants";
-import type { iService } from "$lib/modules";
 
-const { id } = Astro.params;
-const pathname = `/services/${id}`
-const service = services.find(service => service.href === pathname) as iService
+import { getEntry } from "astro:content";
 
-if (!service) {
+const { id } = Astro.params
+
+const entry = await getEntry("services", id as any)
+
+if (entry === undefined) {
   return Astro.redirect("/404")
 }
+
+const { Content } = await entry.render()
 ---
 
-<Layout title={id as string}>
-  <section class="center">
-    <Hero
-      class="center"
-      title={service.name}
-      subline={service.subline}
-    />
-    {
-      service ? service.content : "No content found"
-    }
-  </section>
-</Layout>
+<Content />

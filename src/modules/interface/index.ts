@@ -127,3 +127,9 @@ export interface iListing {
 }
 
 export interface iService extends iSlider {}
+
+export interface iServiceCard {
+  name: string;
+  content: string;
+  image: string;
+}

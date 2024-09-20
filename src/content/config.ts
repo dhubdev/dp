@@ -9,6 +9,17 @@ const legal = defineCollection({
   })
 })
 
+const services = defineCollection({
+  type: "content",
+  schema: z.object({
+    active: z.boolean(),
+    name: z.string(),
+    subline: z.string(),
+    image: z.string()
+  })
+})
+
 export const collections = {
-  'legal': legal
+  'legal': legal,
+  'services': services
 }
