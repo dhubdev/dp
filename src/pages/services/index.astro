@@ -10,6 +10,8 @@ import ServiceList from "$lib/components/svelte/ServiceList.svelte";
       title="Our Services"
       subline="Exceptional Solutions Tailored to Your Needs – Redefining Real Estate with Expertise and Care."
     />
-    <ServiceList client:load />
+    <div class="px-4 md:px-0">
+      <ServiceList client:load />
+    </div>
   </div>
 </Layout>

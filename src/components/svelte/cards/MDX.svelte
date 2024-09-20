@@ -3,16 +3,23 @@
   import Resizable from "../Resizable.svelte";
 
   export let props: iServiceCard[] = [];
+  const { content, image, name } = props[0]
 </script>
 
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<div>
   {#if props.length > 1}
-    {#each props as service, i}
-      <Resizable {service} />
-    {/each}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      {#each props as service, i}
+        <Resizable {service} />
+      {/each}
+    </div>
   {:else}
-    {#each props as service, i}
-      <Resizable class="lg:col-span-2" {service} />
-    {/each}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <img src={image} alt={name}/>
+      <div class="prose dark:prose-invert">
+        <h2>{name}</h2>
+        {@html content}
+      </div>
+    </div>
   {/if}
 </div>
