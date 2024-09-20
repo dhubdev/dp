@@ -39,7 +39,7 @@
     "editorjs-button": "^3.0.3",
     "editorjs-hyperlink": "^1.0.6",
     "editorjs-table": "^1.4.10",
-    "embla-carousel-autoplay": "^8.2.0",
+    "embla-carousel-autoplay": "^8.2.0", 
     "embla-carousel-svelte": "^8.2.0",
     "firebase-admin": "^12.4.0",
     "lucide-svelte": "^0.441.0",
