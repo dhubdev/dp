@@ -1,0 +1,19 @@
+---
+layout: ../../layouts/ServiceLayout.astro
+active: true
+name: Sales
+subline: Ready to sell? Our expert team handles everything to market your property, attract buyers, and secure the best deal.
+image: /services/sales_612x408.webp
+---
+
+import MDX from "../../components/svelte/cards/MDX.svelte"
+
+Ready to take the next step and sell your property? Let us handle the heavy lifting. Our team of seasoned professionals will work tirelessly to market your property effectively, attract qualified buyers, and negotiate the best possible deal on your behalf.
+
+<MDX props={[
+  {
+    name: "Let us sell for you",
+    content: "<p>Our real estate sales service is here to handle all the heavy lifting for you. With a team of seasoned professionals dedicated to your success, we'll work tirelessly to market your property effectively, attract qualified buyers, and negotiate the best possible deal on your behalf.</p><p>Why stress about the complexities of selling your property when you can trust us to manage every aspect with expertise and care? From listing to closing, we've got you covered. Say goodbye to the headaches and let us streamline the process for you.</p><p>Don't wait any longer to achieve your real estate goals. Contact us today and let's get started on selling your property the right way.</p>",
+    image: "/services/sales/sales.webp"
+  },
+]} client:load />
