@@ -17,7 +17,7 @@
   });
 
   const onClick = () => {
-    console.log("Clicking button")
+    
   }
 </script>
 

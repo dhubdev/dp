@@ -38,7 +38,6 @@
       toast.error(error.message);
     } finally {
       loading = false;
-      console.log("loading should be set to false")
     }
   };
 </script>

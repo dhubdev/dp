@@ -17,12 +17,6 @@ export const isValid = (fieldMap: Record<string, any>, fields: Record<string, an
 
   delete fieldMap['undefined']
 
-  // fieldMap.category = fields.category
-  // fieldMap.description = fields.description
-  // fieldMap.status = fields.status
-  // fieldMap.tags = fields.tags
-  console.log({ fieldMap })
-
   for (const [key] of Object.entries(fieldMap)) {
     if (!fieldMap[key]) {
       return { flag: false, message: `${key} field is required` }

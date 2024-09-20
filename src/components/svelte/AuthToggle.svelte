@@ -16,12 +16,17 @@
   });
 
   const onClick = () => {
-    console.log("Clicking button")
-  }
+    console.log("Clicking button");
+  };
 </script>
 
 {#await mounted}
-  <Skeleton class={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full")} />
+  <Skeleton
+    class={cn(
+      buttonVariants({ variant: "ghost", size: "icon" }),
+      "rounded-full",
+    )}
+  />
 {:then _}
   <Button
     on:click={toggleMode}

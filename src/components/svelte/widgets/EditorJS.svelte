@@ -117,7 +117,6 @@
 								}
 							};
 						} catch (error: any) {
-							console.log('error', error.message);
 							return {
 								success: 0,
 								file: {

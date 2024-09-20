@@ -3,21 +3,10 @@ import Layout from "$lib/layouts/Layout.astro";
 import Hero from "$lib/components/astro/Hero.astro";
 import { services } from "$lib/modules/constants";
 import type { iService } from "$lib/modules";
-// import { getEntry } from "astro:content";
 
-// // update below to service
-// const entry = await getEntry("legal", id as any)
-
-// if (entry === undefined) {
-//   return Astro.redirect("/404")
-// }
-
-// const { Content, headings } = await entry.render()
 const { id } = Astro.params;
 const pathname = `/services/${id}`
 const service = services.find(service => service.href === pathname) as iService
-
-console.log({ service, services })
 
 if (!service) {
   return Astro.redirect("/404")
