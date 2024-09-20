@@ -41,7 +41,7 @@
   };
 </script>
 
-<form on:submit={onSubmit} class="flex flex-col gap-4">
+<form on:submit={onSubmit} class="flex flex-col gap-4 w-full">
   <Input type="text" name="name" placeholder="Your Name" required />
   <Input type="email" name="email" placeholder="Your Email" required />
   <Input type="text" name="subject" placeholder="Subject" required />
