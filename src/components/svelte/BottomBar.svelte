@@ -10,7 +10,7 @@
 </script>
 
 <div
-  class="fixed bottom-0 left-1/2 -translate-x-1/2 h-16 flex items-center justify-between z-[2] bg-primary w-full px-4"
+  class="fixed bottom-0 left-1/2 -translate-x-1/2 h-16 flex md:hidden items-center justify-between z-[2] bg-primary w-full px-4"
 >
   {#await mounted}
     <Skeleton class="w-10 h-10 rounded-full" />
