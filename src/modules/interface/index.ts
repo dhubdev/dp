@@ -18,10 +18,19 @@ export interface iDocument {
   data: Record<string, any>
 }
 
+export interface iOrderBy {
+  key: string;
+  direction: "asc" | "desc"
+}
+
 export interface iQuery {
   collectionId: string;
-  where?: iWhere
+  wheres: iWhere[];
+  data?: Record<string, any>;
+  docId?: string;
+  orderBys?: iOrderBy[]
 }
+
 
 export interface iWhere {
   key: string;

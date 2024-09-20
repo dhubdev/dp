@@ -2,18 +2,49 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Card from "$lib/components/ui/card/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
+    import type { iStatus } from "$lib/modules";
   import { Textarea } from "../ui/textarea";
+  import { toast, Toaster } from "svelte-sonner"
+    import SpinLoader from "./SpinLoader.svelte";
 
-  const onSubmit = (evt: SubmitEvent) => {
+  $: loading = false
+  const onSubmit = async (evt: SubmitEvent) => {
     evt.preventDefault();
     const form = evt.target as HTMLFormElement;
     const formData = new FormData(form);
     const entries = Object.fromEntries(formData.entries());
 
-    console.log({ entries });
+    try {
+      loading = true;
+      const url = `/api/quote`;
+      const options: RequestInit = {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(entries),
+      };
+      const response = await fetch(url, options);
+      const { status, message } = (await response.json()) as iStatus;
+
+      if (status === "error") {
+        toast.error(message);
+      } else {
+        toast.success(message);
+        form.reset();
+      }
+    } catch (error: any) {
+      toast.error(error.message);
+    } finally {
+      loading = false;
+      console.log("loading should be set to false")
+    }
   };
 </script>
 
+<div class="fixed top-0 left-0 z-10">
+  <Toaster richColors position="top-center" />
+</div>
 <form on:submit={onSubmit}>
   <Card.Root class="w-full bg-background">
     <Card.Header>
@@ -30,9 +61,13 @@
       <Textarea required placeholder="Message..." name="message" class="resize-none" />
     </Card.Content>
     <Card.Footer class="flex justify-center">
-      <Button class="w-full dark:bg-white dark:text-primary" type="submit"
-        >Submit</Button
-      >
+      {#if loading}
+        <Button class="w-full">
+          <SpinLoader />
+        </Button>
+      {:else}
+        <Button class="w-full" type="submit">Submit</Button>
+      {/if}
     </Card.Footer>
   </Card.Root>
 </form>
