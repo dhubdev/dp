@@ -23,6 +23,8 @@ const { title, caption } = frontmatter;
 			title={title}
 			subline={caption}
 		/>
-    <slot />
+    <main class="prose dark:prose-invert">
+      <slot />
+    </main>
   </section>
 </Layout>
