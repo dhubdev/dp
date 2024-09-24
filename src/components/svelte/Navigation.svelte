@@ -10,7 +10,6 @@
     {
       name: "Home",
       href: "/",
-
     },
     {
       name: "About",
@@ -41,20 +40,14 @@
 
   onMount(() => {
     pathname = new URL(location.href).pathname;
-    mounted = true
+    mounted = true;
   });
-
-  const secondaryClass = buttonVariants({ variant: "secondary" })
 </script>
 
 <div class="hidden md:flex items-center gap-2">
   {#if mounted}
     {#each navLinks as { name, href } (href)}
-      <Button
-        {href}
-        class={cn(isCurrentPage(href) ? `${secondaryClass} border-2 dark:border-white border-primary` : "", "rounded-full", "bg-secondary")}
-        variant="outline">{name}</Button
-      >
+      <Button {href} variant={isCurrentPage(href) ? "outline" : "default"}>{name}</Button>
     {/each}
   {/if}
 </div>
