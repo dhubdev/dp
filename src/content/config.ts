@@ -13,6 +13,7 @@ const services = defineCollection({
   type: "content",
   schema: z.object({
     active: z.boolean(),
+    order: z.number(),
     name: z.string(),
     subline: z.string(),
     image: z.string()

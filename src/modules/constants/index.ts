@@ -85,13 +85,6 @@ export const services: iService[] = [
     image: "/services/investments_1920x1080.webp"
   },
   {
-    name: "Lettings",
-    subline: "Searching for the ideal rental property? Look no further.",
-    href: "/services/lettings",
-    cta: "Learn more",
-    image: "/services/lettings_1240x826.webp"
-  },
-  {
     name: "Post-Construction Cleaning",
     subline: "Our UK construction cleaning delivers precise results for all projects, from major national contracts to small local builds, tailored to every scope.",
     href: "/services/post-construction-cleaning",
@@ -105,6 +98,13 @@ export const services: iService[] = [
     cta: "Learn more",
     image: "/services/sales_612x408.webp"
   }, 
+  {
+    name: "Lettings",
+    subline: "Searching for the ideal rental property? Look no further.",
+    href: "/services/lettings",
+    cta: "Learn more",
+    image: "/services/lettings_1240x826.webp"
+  },
   {
     name: "Void Property Cleaning",
     subline: "Tailored cleanup solutions for void properties, from large commercial sites to smaller residential units, customized to meet each project's unique needs.",
