@@ -15,9 +15,7 @@
     <div>
       <h2 class={`${sublineClasses} text-start`}>Assisting individuals in locating the appropriate real estate.</h2>
       <p>
-        At DHUB PROPERTY, we guide clients through every step of their real estate
-        journey, ensuring they find the perfect property that aligns with their
-        unique needs and aspirations.
+        At Dhub Property, we are a dynamic and innovative company specializing in construction and cleaning services that cater to the diverse needs of our clients. Based in Manchester, we pride ourselves on delivering excellence in every project we undertake, whether it’s creating stunning, functional spaces or ensuring pristine, hygienic environments.
       </p>
     </div>
     <div class="flex flex-col gap-4">
