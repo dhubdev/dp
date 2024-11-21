@@ -27,6 +27,6 @@
   </div>
   <div class="text-sm">
     <div>1k+ Happy</div>
-    <div>Customers</div>
+    <div>Clients</div>
   </div>
 </Card>
