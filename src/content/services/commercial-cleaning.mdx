@@ -1,0 +1,20 @@
+---
+layout: ../../layouts/ServiceLayout.astro
+active: true
+name: Commercial Cleaning
+order: 7
+subline: Tailored cleaning solutions for commercial spaces, from expansive office complexes to small businesses, customized to meet the unique demands of each environment.
+image: /services/commercial-cleaning.webp
+---
+
+import MDX from "../../components/svelte/cards/MDX.svelte"
+
+From extensive cleanups for large commercial properties to detailed work for smaller residential units, we tailor our services to meet the unique requirements of each void property project.
+
+<MDX props={[
+  {
+    name: "Let's Restore Your Vacant Properties to Perfection",
+    content: "<p>From bustling office complexes to retail spaces and industrial facilities, we provide exceptional commercial cleaning services tailored to meet diverse needs. Whether you manage a large-scale enterprise or a smaller business, our team is equipped to deliver customized solutions that align with your operational requirements.</p><p>We recognize that clean, well-maintained environments are vital for productivity, safety, and creating positive impressions. Our meticulous approach ensures every area is thoroughly cleaned and maintained, leaving your commercial space spotless and welcoming. With advanced equipment, cutting-edge techniques, and an unwavering commitment to quality, our team consistently raises the standard for commercial cleaning excellence.</p>",
+    image: "/services/commercial-cleaning.webp"
+  },
+]} client:load />
