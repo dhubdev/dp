@@ -111,6 +111,13 @@ export const services: iService[] = [
     href: "/services/void-property-cleaning",
     cta: "Learn more",
     image: "/services/void-property-cleaning_1655x1080.webp"
+  },
+  {
+    name: "Commercial Cleaning",
+    subline: "Tailored cleaning solutions for commercial spaces, from expansive office complexes to small businesses, customized to meet the unique demands of each environment.",
+    href: "/services/commercial-cleaning",
+    cta: "Learn more",
+    image: "/services/commercial-cleaning.webp"
   }
 ] 
 export const highlightList = [
