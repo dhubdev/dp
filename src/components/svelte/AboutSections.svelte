@@ -20,7 +20,7 @@
     {
       title: "Our Mission",
       content:
-        "Our mission at DHUB Property is simple: to provide comprehensive property solutions tailored to meet the diverse needs of our clients. Whether you're buying, selling, renting, renovating, or constructing a property, we are here to guide you through every step of the process with professionalism, integrity, and personalized service.",
+        "At Dhub Property, our mission is simple yet powerful: 'To build and maintain spaces that inspire, elevate, and exceed expectations.'<br/><br/>We strive to create sustainable, high-quality structures through our construction services while ensuring cleanliness and safety through our exceptional cleaning solutions. Our focus is on delivering unparalleled customer satisfaction by combining innovation, attention to detail, and a commitment to excellence in everything we do.<br/><br/>Whether you’re looking to construct your dream space or maintain a clean, professional environment, Dhub Property is here to transform your vision into reality.",
       image: "/about/our-mission.webp",
     },
     {
