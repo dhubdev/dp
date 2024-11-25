@@ -4,7 +4,9 @@
   import { Textarea } from "../ui/textarea";
   import { toast } from "svelte-sonner";
   import SpinLoader from "./SpinLoader.svelte";
-  import type { iStatus } from "$lib/modules";
+  import { type iStatus } from "$lib/modules/interface";
+  import { removeRingClasses } from "$lib/modules/constants";
+  import { cn } from "$lib/utils";
 
   $: loading = false;
 
@@ -42,11 +44,34 @@
 </script>
 
 <form on:submit={onSubmit} class="flex flex-col gap-4 w-full">
-  <Input type="text" name="name" placeholder="Your Name" required />
-  <Input type="email" name="email" placeholder="Your Email" required />
-  <Input type="text" name="subject" placeholder="Subject" required />
+  <Input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+    class={removeRingClasses}
+  />
+  <Input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+    class={removeRingClasses}
+  />
+  <Input
+    type="text"
+    name="subject"
+    placeholder="Subject"
+    required
+    class={removeRingClasses}
+  />
 
-  <Textarea id="message" name="message" rows={6} required class="resize-none"
+  <Textarea
+    id="message"
+    name="message"
+    rows={6}
+    required
+    class={cn("resize-none", removeRingClasses)}
   ></Textarea>
   {#if loading}
     <Button>

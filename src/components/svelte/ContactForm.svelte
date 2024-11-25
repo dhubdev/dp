@@ -2,12 +2,15 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Card from "$lib/components/ui/card/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
-    import type { iStatus } from "$lib/modules";
-  import { Textarea } from "../ui/textarea";
-  import { toast, Toaster } from "svelte-sonner"
-    import SpinLoader from "./SpinLoader.svelte";
+  import { type iStatus } from "$lib/modules/interface";
 
-  $: loading = false
+  import { removeRingClasses } from "$lib/modules/constants";
+  import { Textarea } from "../ui/textarea";
+  import { toast, Toaster } from "svelte-sonner";
+  import SpinLoader from "./SpinLoader.svelte";
+  import { cn } from "$lib/utils";
+
+  $: loading = false;
   const onSubmit = async (evt: SubmitEvent) => {
     evt.preventDefault();
     const form = evt.target as HTMLFormElement;
@@ -48,16 +51,20 @@
   <Card.Root class="w-full bg-background">
     <Card.Header>
       <Card.Title>Contact Us</Card.Title>
-      <Card.Description
-       class="line-clamp-2"
+      <Card.Description class="line-clamp-2"
         >Connect with us today to discover how we can assist you.</Card.Description
       >
     </Card.Header>
     <Card.Content class="flex flex-col gap-4 lg:gap-8">
-      <Input required placeholder="Full name" name="name" />
-      <Input required placeholder="Email Address" type="email" name="email" />
-      <Input required placeholder="Subject" type="text" name="subject" />
-      <Textarea required placeholder="Message..." name="message" class="resize-none" />
+      <Input required placeholder="Full name" name="name" class={removeRingClasses} />
+      <Input required placeholder="Email Address" type="email" name="email" class={removeRingClasses} />
+      <Input required placeholder="Subject" type="text" name="subject" class={removeRingClasses} />
+      <Textarea
+        required
+        placeholder="Message..."
+        name="message"
+        class={cn("resize-none", removeRingClasses)}
+      />
     </Card.Content>
     <Card.Footer class="flex justify-center">
       {#if loading}

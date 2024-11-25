@@ -4,6 +4,8 @@
   import { toast } from "svelte-sonner";
   import SpinLoader from "./SpinLoader.svelte";
   import type { iStatus } from "$lib/modules/interface";
+    import { cn } from "$lib/utils";
+    import { removeRingClasses } from "$lib/modules/constants";
 
   $: loading = false;
 
@@ -44,7 +46,7 @@
     name="email"
     type="email"
     placeholder="Enter your email"
-    class="border-2 border-white outline-none text-white"
+    class={cn("outline-none text-font dark:text-white", removeRingClasses, '!border')}
     required
   />
   {#if loading}

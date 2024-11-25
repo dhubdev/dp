@@ -130,3 +130,5 @@ export const highlightList = [
   highlightRedClasses,
   highlightPinkClasses,
 ];
+
+export const removeRingClasses = 'focus-visible:ring-0 focus-visible:ring-offset-0'

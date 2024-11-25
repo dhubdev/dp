@@ -6,6 +6,8 @@
   import { Textarea } from "../ui/textarea";
   import { toast, Toaster } from "svelte-sonner";
   import SpinLoader from "./SpinLoader.svelte";
+  import { removeRingClasses } from "$lib/modules/constants";
+  import { cn } from "$lib/utils";
 
   $: loading = false;
 
@@ -55,14 +57,31 @@
       >
     </Card.Header>
     <Card.Content class="flex flex-col gap-4 lg:gap-8">
-      <Input required placeholder="Full name" name="name" />
-      <Input required placeholder="Email Address" type="email" name="email" />
-      <Input required placeholder="Phone Number" type="text" name="phone" />
+      <Input
+        required
+        placeholder="Full name"
+        name="name"
+        class={removeRingClasses}
+      />
+      <Input
+        required
+        placeholder="Email Address"
+        type="email"
+        name="email"
+        class={removeRingClasses}
+      />
+      <Input
+        required
+        placeholder="Phone Number"
+        type="text"
+        name="phone"
+        class={removeRingClasses}
+      />
       <Textarea
         required
         placeholder="Enter the details of your quote"
         name="quoteDescription"
-        class="resize-none"
+        class={cn("resize-none", removeRingClasses)}
       />
     </Card.Content>
     <Card.Footer class="flex justify-center">
