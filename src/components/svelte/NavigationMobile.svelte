@@ -5,7 +5,7 @@
   import type { iNavLink } from "$lib/modules/interface";
   import { purify } from "$lib/modules/fxns";
   import { cn } from "$lib/utils";
-  import { Home, User, Phone, PoundSterlingIcon, CogIcon } from "lucide-svelte";
+  import { Home, User, Phone, PoundSterlingIcon, CogIcon, DollarSignIcon } from "lucide-svelte";
   import AppsIcon from "./icons/AppsIcon.svelte";
 
   const navLinks: iNavLink[] = [
@@ -24,11 +24,11 @@
       href: "/services",
       icon: CogIcon,
     },
-    // {
-    //   name: "Projects",
-    //   href: "/projects",
-    //   icon: Cog,
-    // },
+    {
+      name: "Self Sponsorship",
+      href: "/self-sponsorship",
+      icon: DollarSignIcon
+    },
     {
       name: "Investment",
       href: "/services/investment",
