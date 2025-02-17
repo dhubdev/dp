@@ -19,10 +19,10 @@
       name: "Services",
       href: "/services",
     },
-    // {
-    //   name: "Projects",
-    //   href: "/projects",
-    // },
+    {
+      name: "Self Sponsorship",
+      href: "/self-sponsorship",
+    },
     {
       name: "Investment",
       href: "/services/investment",

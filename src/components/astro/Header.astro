@@ -16,17 +16,6 @@ import { UserIcon } from "lucide-svelte"
       <div class="flex items-center gap-4">
         <Navigation client:load />
         <div class="flex items-center gap-2">
-          <!-- <SignedOut>
-            <Button class="rounded-full md:hidden" size="icon" href="/sign-in">
-              <UserIcon class="w-4 h-4" />
-            </Button>
-            <Button class="rounded-full hidden md:flex" href="/sign-in"
-              >Login / Register</Button
-            >
-          </SignedOut>
-          <SignedIn>
-            <UserButton class:list={["w-10 h-10"]} />
-          </SignedIn> -->
           <ModeToggle client:load class="hidden lg:flex" />
         </div>
       </div>

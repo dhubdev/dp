@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from "$lib/components/astro/Hero.astro";
+import SelfSponsorshipComponent from '$lib/components/svelte/SelfSponsorshipComponent.svelte';
+---
+
+<Layout title="Self Sponsorship | DHUB Property">
+	<div>
+		<Hero
+			title="Self Sponsorship"
+			subline="Self-Sponsored Visa Route UK: Helping Business Professionals Achieve Permanent UK Residency"
+		/>
+    <SelfSponsorshipComponent client:visible />
+  </div>
+</Layout>
