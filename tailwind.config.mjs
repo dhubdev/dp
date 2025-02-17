@@ -15,6 +15,19 @@ const config = {
 		},
 		extend: {
 			colors: {
+				'emerald': {
+					'50': '#F2FCF9',
+					'100': '#E6FAF3',
+					'200': '#BDF0DC',
+					'300': '#9BE8C6',
+					'400': '#5AD694',
+					'500': '#22c55e',
+					'600': '#1AB04F',
+					'700': '#13943C',
+					'800': '#0C752B',
+					'900': '#07591D',
+					'950': '#03380F'
+				},
 				lightpaper: "#F5F5F5",
 				paper: "#eaeded",
 				alternate: "#fff",
@@ -69,12 +82,12 @@ const config = {
 				'xxs': '12px'
 			},
 			typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            maxWidth: '100%', // Set max-width of prose to 100%
-          },
-        },
-      }),
+				DEFAULT: {
+					css: {
+						maxWidth: '100%', // Set max-width of prose to 100%
+					},
+				},
+			}),
 		}
 	},
 	plugins: [

@@ -52,7 +52,7 @@
 								{slider.subline}
 							</p>
 						</div>
-						<Button class="w-full lg:w-fit self-start dark:bg-white dark:text-primary" href={slider.href}>{slider.cta}</Button>
+						<Button class="w-full lg:w-fit self-start" href={slider.href}>{slider.cta}</Button>
 					</div>
 				</div>
 			{/each}
