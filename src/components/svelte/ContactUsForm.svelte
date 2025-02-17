@@ -8,6 +8,10 @@
   import { removeRingClasses } from "$lib/modules/constants";
   import { cn } from "$lib/utils";
 
+  let className: string = '';
+
+  export { className as class };
+
   $: loading = false;
 
   const onSubmit = async (evt: SubmitEvent) => {
@@ -43,7 +47,7 @@
   };
 </script>
 
-<form on:submit={onSubmit} class="flex flex-col gap-4 w-full">
+<form on:submit={onSubmit} class={cn("flex flex-col gap-4 w-full", className)}>
   <Input
     type="text"
     name="name"
