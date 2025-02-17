@@ -50,10 +50,10 @@
     required
   />
   {#if loading}
-    <Button type="submit" class="bg-white text-primary">
+    <Button type="submit" class="w-full md:w-fit">
       <SpinLoader />
     </Button>
   {:else}
-    <Button type="submit" class="bg-white text-primary w-full md:w-fit">Subscribe</Button>
+    <Button type="submit" class="w-full md:w-fit">Subscribe</Button>
   {/if}
 </form>
