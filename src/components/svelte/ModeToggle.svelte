@@ -6,6 +6,7 @@
   import { Skeleton } from "$lib/components/ui/skeleton";
   import { cn } from "$lib/utils";
   import { onMount } from "svelte";
+    import { removeRingClasses } from "$lib/modules/constants";
 
   let className: string = "";
 
@@ -29,7 +30,7 @@
     variant="outline"
     size="icon"
     on:click={onClick}
-    class={cn("rounded-full flex items-center justify-center", className)}
+    class={cn("rounded-full flex items-center justify-center !border-0", className, removeRingClasses)}
   >
     <Sun
       class={cn("h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0", iconClass)}
