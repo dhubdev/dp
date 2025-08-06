@@ -20,10 +20,6 @@
       href: "/services",
     },
     {
-      name: "Self Sponsorship",
-      href: "/self-sponsorship",
-    },
-    {
       name: "Investment",
       href: "/services/investment",
     },
