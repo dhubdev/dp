@@ -89,7 +89,8 @@ export const services: iService[] = [
     subline: "Tailored cleanup solutions for properties, from large commercial sites to smaller residential units, customized to meet each project's unique needs.",
     href: "https://cleaning.dhubgroup.com",
     cta: "Learn more",
-    image: "/services/void-property-cleaning_1655x1080.webp"
+    image: "/services/void-property-cleaning_1655x1080.webp",
+    target: "_blank"
   }
 ] 
 export const highlightList = [

@@ -126,7 +126,9 @@ export interface iListing {
   tags: TTag[]
 }
 
-export interface iService extends iSlider {}
+export interface iService extends iSlider {
+  target?: string
+}
 
 export interface iServiceCard {
   name: string;

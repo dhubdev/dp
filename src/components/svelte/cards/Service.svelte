@@ -4,12 +4,12 @@
 
   export let service: iService;
 
-  const { cta, href, image, name, subline } = service;
+  const { cta, href, image, name, subline, target } = service;
 
   const style = `background:url(${image}) no-repeat;background-position:center;background-size:cover`
 </script>
 
-<a {href} aria-label={name} class="flex flex-col gap-4 h-full">
+<a {href} {target} aria-label={name} class="flex flex-col gap-4 h-full">
   <div class="aspect-video rounded-lg w-full" {style} />
   <div class="flex flex-col gap-4">
     <div>
