@@ -71,25 +71,11 @@ export const services: iService[] = [
     image: "/services/renovation_1920x1080.webp"
   },
   {
-    name: "Construction",
-    subline: "Building your dream home from the ground up. Trust DHUB Property to turn your vision into reality.",
-    href: "/services/construction",
+    name: "Lettings / Renting",
+    subline: "Searching for the ideal rental property? Look no further.",
+    href: "/services/lettings",
     cta: "Learn more",
-    image: "/services/construction_2048x825.webp"
-  },
-  {
-    name: "Investment",
-    subline: "Invest in UK property and secure your path to settlement.",
-    href: "/services/investment",
-    cta: "Learn more",
-    image: "/services/investments_1920x1080.webp"
-  },
-  {
-    name: "Post-Construction Cleaning",
-    subline: "Our UK construction cleaning delivers precise results for all projects, from major national contracts to small local builds, tailored to every scope.",
-    href: "/services/post-construction-cleaning",
-    cta: "Learn more",
-    image: "/services/post-construction-cleaning_900x550.webp"
+    image: "/services/lettings_1240x826.webp"
   },
   {
     name: "Sales",
@@ -99,25 +85,11 @@ export const services: iService[] = [
     image: "/services/sales_612x408.webp"
   }, 
   {
-    name: "Lettings",
-    subline: "Searching for the ideal rental property? Look no further.",
-    href: "/services/lettings",
-    cta: "Learn more",
-    image: "/services/lettings_1240x826.webp"
-  },
-  {
-    name: "Void Property Cleaning",
-    subline: "Tailored cleanup solutions for void properties, from large commercial sites to smaller residential units, customized to meet each project's unique needs.",
+    name: "Cleaning",
+    subline: "Tailored cleanup solutions for properties, from large commercial sites to smaller residential units, customized to meet each project's unique needs.",
     href: "/services/void-property-cleaning",
     cta: "Learn more",
     image: "/services/void-property-cleaning_1655x1080.webp"
-  },
-  {
-    name: "Commercial Cleaning",
-    subline: "Tailored cleaning solutions for commercial spaces, from expansive office complexes to small businesses, customized to meet the unique demands of each environment.",
-    href: "/services/commercial-cleaning",
-    cta: "Learn more",
-    image: "/services/commercial-cleaning.webp"
   }
 ] 
 export const highlightList = [
