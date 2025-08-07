@@ -38,15 +38,15 @@
 
   let isSubmitting = false;
 
-  const handleInputChange = (
-    field: keyof SubmitRentalInquiryRequest,
-    value: string | number
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
+  // const handleInputChange = (
+  //   field: keyof SubmitRentalInquiryRequest,
+  //   value: string | number
+  // ) => {
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [field]: value,
+  //   }));
+  // };
 
   const handleSubmit = async (e: SubmitEvent) => {
     e.preventDefault();
@@ -89,7 +89,7 @@
   };
 </script>
 
-<Card class="w-full">
+<Card class="w-full dark:bg-secondary">
   <CardHeader>
     <CardTitle class="flex items-center gap-2">
       <Home class="h-5 w-5" />
@@ -97,7 +97,7 @@
     </CardTitle>
   </CardHeader>
   <CardContent>
-    <form on:submit={handleSubmit} class="space-y-6">
+    <form on:submit={handleSubmit} class="space-y-6 w-full flex flex-col items-center">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="space-y-2">
           <label for="name" class="flex items-center gap-2">
@@ -130,7 +130,7 @@
         </div>
       </div>
 
-      <div class="space-y-2">
+      <div class="space-y-2 w-full">
         <label for="email" class="flex items-center gap-2">
           <Mail class="h-4 w-4" />
           Email Address *
@@ -145,7 +145,7 @@
         />
       </div>
 
-      <div class="space-y-2">
+      <div class="space-y-2 w-full">
         <label for="address" class="flex items-center gap-2">
           <MapPin class="h-4 w-4" />
           Current Address *
@@ -161,7 +161,7 @@
         />
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         <div class="space-y-2">
           <label for="propertyType">Property Type *</label>
           <!-- <Select value={formData.propertyType}>
@@ -191,7 +191,7 @@
         </div>
       </div>
 
-      <div class="space-y-2">
+      <div class="space-y-2 w-full">
         <label for="price" class="flex items-center gap-2">
           <PoundSterling class="h-4 w-4" />
           Budget (£ per month) *
@@ -208,7 +208,7 @@
         />
       </div>
 
-      <div class="space-y-2">
+      <div class="space-y-2 w-full">
         <label for="ukReference">UK Reference *</label>
         <Textarea
           id="ukReference"
@@ -220,7 +220,7 @@
         />
       </div>
 
-      <Button type="submit" class="w-full" disabled={isSubmitting}>
+      <Button type="submit" class="w-full md:w-fit" disabled={isSubmitting}>
         {#if isSubmitting}
           <Loader2 class="mr-2 h-4 w-4 animate-spin" />
           Submitting...
