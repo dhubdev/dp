@@ -2,7 +2,7 @@
 layout: ../../layouts/LegalLayout.astro
 active: true
 title: Terms of Use
-caption: Welcome to DHUB Property! These terms and conditions outline the rules and regulations for the use of our website.
+caption: Welcome to Dhub Property! These terms and conditions outline the rules and regulations for the use of our website.
 ---
 
 

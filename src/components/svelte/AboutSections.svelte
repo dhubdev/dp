@@ -26,7 +26,7 @@
     {
       title: "Our Team",
       content:
-        "DHUB Property is a team of passionate and experienced professionals with a deep understanding of the real estate industry. From our knowledgeable sales agents to our skilled renovation experts and construction team, every member is committed to delivering excellence in everything we do.<br/><br/>Our mission is simple, yet powerful: We strive to create sustainable, high-quality structures through our construction services while ensuring cleanliness and safety through our exceptional cleaning solutions. Our focus is on delivering unparalleled customer satisfaction by combining innovation, attention to detail, and a commitment to excellence in everything we do.",
+        "Dhub Property is a team of passionate and experienced professionals with a deep understanding of the real estate industry. From our knowledgeable sales agents to our skilled renovation experts and construction team, every member is committed to delivering excellence in everything we do.<br/><br/>Our mission is simple, yet powerful: We strive to create sustainable, high-quality structures through our construction services while ensuring cleanliness and safety through our exceptional cleaning solutions. Our focus is on delivering unparalleled customer satisfaction by combining innovation, attention to detail, and a commitment to excellence in everything we do.",
       image: "/about/our-team.webp",
     },
   ];

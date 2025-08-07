@@ -20,7 +20,7 @@
     <div class="mx-auto w-full max-w-sm">
       <Drawer.Header class="flex flex-col items-center">
         <Drawer.Title class="text-font dark:text-white"
-          >DHUB Property</Drawer.Title
+          >Dhub Property</Drawer.Title
         >
         <Drawer.Description>Navigate our space</Drawer.Description>
       </Drawer.Header>

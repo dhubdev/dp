@@ -15,7 +15,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="flex flex-col gap-4">
       <div>
-        <h2 class={`${sublineClasses} text-start`}>About DHUB Property</h2>
+        <h2 class={`${sublineClasses} text-start`}>About Dhub Property</h2>
         <p>
           At Dhub Property, we are a dynamic and innovative company specializing
           in construction and cleaning services that cater to the diverse needs of

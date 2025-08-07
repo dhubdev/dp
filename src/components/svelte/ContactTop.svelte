@@ -27,7 +27,7 @@
       </Button>
       <Button
         variant="ghost"
-        href="mailto:enquiries@dhubproperty.co.uk?subject=DHUB%20Property%20Inquiry&body=Hello"
+        href="mailto:enquiries@dhubproperty.co.uk?subject=Dhub%20Property%20Inquiry&body=Hello"
         class="flex items-center gap-2 !p-0 h-full !px-2 text-white"
       >
         <Email class="" />

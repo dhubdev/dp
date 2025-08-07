@@ -2,7 +2,7 @@
 layout: ../../layouts/LegalLayout.astro
 active: true
 title: Cookie Policy
-caption: At DHUB Property, we value your privacy and are committed to being transparent about how we use cookies on our website.
+caption: At Dhub Property, we value your privacy and are committed to being transparent about how we use cookies on our website.
 ---
 
 ## What Are Cookies?
