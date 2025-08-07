@@ -87,7 +87,7 @@ export const services: iService[] = [
   {
     name: "Cleaning",
     subline: "Tailored cleanup solutions for properties, from large commercial sites to smaller residential units, customized to meet each project's unique needs.",
-    href: "/services/void-property-cleaning",
+    href: "https://cleaning.dhubgroup.com",
     cta: "Learn more",
     image: "/services/void-property-cleaning_1655x1080.webp"
   }
