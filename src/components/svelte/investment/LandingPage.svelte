@@ -4,6 +4,7 @@ import InvestmentOptions from "./InvestmentOptions.svelte";
 import VisaSettlement from "./VisaSettlement.svelte";
 import HowItWorks from "./HowItWorks.svelte";
 import WhyChooseUs from "./WhyChooseUs.svelte";
+import ContactSection from "./ContactSection.svelte";
 </script>
 
 <Hero />
@@ -11,3 +12,4 @@ import WhyChooseUs from "./WhyChooseUs.svelte";
 <VisaSettlement />
 <HowItWorks />
 <WhyChooseUs />
+<ContactSection />
