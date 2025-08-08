@@ -139,7 +139,7 @@
           </TabsList>
 
           <TabsContent value="advantages" class="space-y-4">
-            <Card>
+            <Card class="dark:bg-background">
               <CardHeader>
                 <CardTitle class="flex items-center text-green-700">
                   <CheckCircle class="h-6 w-6 mr-2" />
@@ -148,40 +148,40 @@
               </CardHeader>
               <CardContent class="space-y-4">
                 <div class="space-y-3">
-                  <div class="flex items-start space-x-3">
+                  <div class="flex items-center space-x-3">
                     <div class="p-2 bg-green-100 rounded-lg">
                       <Users class="h-5 w-5 text-green-600" />
                     </div>
                     <div>
-                      <h4 class="font-semibold text-slate-900">Dual Benefit</h4>
-                      <p class="text-slate-600 text-sm">
+                      <h4 class="font-semibold">Dual Benefit</h4>
+                      <p class="text-muted-foreground text-sm">
                         Generate investment returns while building towards UK
                         residency
                       </p>
                     </div>
                   </div>
 
-                  <div class="flex items-start space-x-3">
+                  <div class="flex items-center space-x-3">
                     <div class="p-2 bg-green-100 rounded-lg">
                       <FileText class="h-5 w-5 text-green-600" />
                     </div>
                     <div>
-                      <h4 class="font-semibold text-slate-900">Full Support</h4>
-                      <p class="text-slate-600 text-sm">
+                      <h4 class="font-semibold">Full Support</h4>
+                      <p class="text-muted-foreground text-sm">
                         Complete immigration and investment management
                       </p>
                     </div>
                   </div>
 
-                  <div class="flex items-start space-x-3">
+                  <div class="flex items-center space-x-3">
                     <div class="p-2 bg-green-100 rounded-lg">
                       <Clock class="h-5 w-5 text-green-600" />
                     </div>
                     <div>
-                      <h4 class="font-semibold text-slate-900">
+                      <h4 class="font-semibold">
                         Clear Timeline
                       </h4>
-                      <p class="text-slate-600 text-sm">
+                      <p class="text-muted-foreground text-sm">
                         Structured 5-year pathway to citizenship
                       </p>
                     </div>
@@ -192,7 +192,7 @@
           </TabsContent>
 
           <TabsContent value="considerations" class="space-y-4">
-            <Card>
+            <Card class="dark:bg-background">
               <CardHeader>
                 <CardTitle class="flex items-center text-amber-700">
                   <AlertCircle class="h-6 w-6 mr-2" />
@@ -202,7 +202,7 @@
               <CardContent class="space-y-4">
                 <div class="space-y-3">
                   <div
-                    class="p-4 bg-amber-50 rounded-lg border border-amber-200"
+                    class="p-4 bg-amber-50 dark:bg-amber-50/50 rounded-lg border border-amber-200"
                   >
                     <h4 class="font-semibold text-slate-900 mb-2">
                       Higher Investment Requirement
