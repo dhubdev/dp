@@ -24,14 +24,14 @@
       href: "/services",
       icon: CogIcon,
     },
-    {
-      name: "Self Sponsorship",
-      href: "/self-sponsorship",
-      icon: DollarSignIcon
-    },
+    // {
+    //   name: "Self Sponsorship",
+    //   href: "/self-sponsorship",
+    //   icon: DollarSignIcon
+    // },
     {
       name: "Investment",
-      href: "/services/investment",
+      href: "/investment",
       icon: PoundSterlingIcon,
     },
     {
