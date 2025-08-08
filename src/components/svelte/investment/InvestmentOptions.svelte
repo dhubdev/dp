@@ -90,19 +90,19 @@
           <div
             class="p-4 rounded-lg bg-primary/10"
           >
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-sm font-medium text-primary dark:text-muted-foreground"
+            <div class="flex items-center justify-between mb-2 text-primary dark:text-green-600">
+              <span class="text-sm font-medium"
                 >Minimum Investment</span
               >
-              <span class="text-lg font-bold text-primary dark:text-green-600"
+              <span class="text-lg font-bold"
                 >£25,000</span
               >
             </div>
-            <div class="flex items-center justify-between">
-              <span class="text-sm font-medium text-primary dark:text-muted-foreground"
+            <div class="flex items-center justify-between text-primary dark:text-green-600">
+              <span class="text-sm font-medium"
                 >Expected Timeline</span
               >
-              <span class="text-lg font-bold text-primary dark:text-green-600"
+              <span class="text-lg font-bold"
                 >6-12 months</span
               >
             </div>
