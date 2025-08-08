@@ -1,13 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "$lib/components/astro/Hero.astro";
+import Hero from "$lib/components/astro/Hero.astro"; 
+import LandingPage from "$lib/components/svelte/investment/LandingPage.svelte";
 ---
 
 <Layout title="Services | Dhub Property">
   <div class="md:center flex flex-col gap-4">
-    <Hero
+    <!-- <Hero
       title="Investment"
       subline="Empowering Your Financial Future – Smart, Strategic, and Sustainable Real Estate Investments."
-    />
+    /> -->
+    <LandingPage />
   </div>
 </Layout>

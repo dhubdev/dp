@@ -21,7 +21,7 @@
     },
     {
       name: "Investment",
-      href: "/services/investment",
+      href: "/investment",
     },
     {
       name: "Contact Us",
