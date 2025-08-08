@@ -61,8 +61,7 @@
       color: "#f97316",
     },
   ];
-
-  function hexToRgba(hex: string, opacity: number): string {
+  const hexToRgba = (hex: string, opacity: number): string => {
     // Remove leading # if present
     hex = hex.replace(/^#/, "");
 
@@ -83,7 +82,7 @@
     const b = parseInt(hex.substring(4, 6), 16);
 
     return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-  }
+  };
 </script>
 
 <section class="py-20">
@@ -114,7 +113,7 @@
           {@const Icon = step.icon}
           <Card
             class="relative border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 dark:bg-background dark:border-muted-foreground/20"
-          style="border-color: {hexToRgba(step.color, .2)};"
+            style="border-color: {hexToRgba(step.color, 0.2)};"
           >
             <CardContent class="p-6 text-center">
               <div class="relative mb-4">
@@ -131,12 +130,15 @@
                   />
                 </div>
                 <div
-                  class="absolute -top-2 -right-2 w-8 h-8 bg-slate-900 text-white rounded-full flex items-center justify-center text-sm font-bold"
+                  class="absolute -top-2 -right-2 w-8 h-8 text-white bg-primary dark:text-primary dark:bg-white rounded-full flex items-center justify-center text-sm font-bold"
                 >
                   {index + 1}
                 </div>
               </div>
-              <h4 class="text-lg font-semibold mb-2" style="color: {step.color}">
+              <h4
+                class="text-lg font-semibold mb-2"
+                style="color: {step.color}"
+              >
                 {step.title}
               </h4>
               <p class="text-muted-foreground text-sm leading-relaxed">
@@ -164,8 +166,11 @@
       <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {#each immigrationSteps as step, index}
           {@const Icon = step.icon}
-          <Card class={cn("relative border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 dark:bg-background dark:border-muted-foreground/20")}
-          style="border-color: {hexToRgba(step.color, .2)};"
+          <Card
+            class={cn(
+              "relative border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 dark:bg-background dark:border-muted-foreground/20"
+            )}
+            style="border-color: {hexToRgba(step.color, 0.2)};"
           >
             <CardContent class="p-6 text-center">
               <div class="relative mb-4">
@@ -182,12 +187,15 @@
                   />
                 </div>
                 <div
-                  class="absolute -top-2 -right-2 w-8 h-8 bg-slate-900 text-white rounded-full flex items-center justify-center text-sm font-bold"
+                  class="absolute -top-2 -right-2 w-8 h-8 text-white bg-primary dark:text-primary dark:bg-white rounded-full flex items-center justify-center text-sm font-bold"
                 >
                   {index + 1}
                 </div>
               </div>
-              <h4 class="text-lg font-semibold text-slate-900 mb-2" style="color: {step.color}">
+              <h4
+                class="text-lg font-semibold mb-2"
+                style="color: {step.color}"
+              >
                 {step.title}
               </h4>
               <p class="text-muted-foreground text-sm leading-relaxed">
