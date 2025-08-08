@@ -9,7 +9,15 @@
 
 </script>
 
-<div class={cn("bg-white dark:bg-background p-4 rounded-lg", className)}>
+<div class={cn("bg-white dark:bg-background p-4 rounded-lg relative backdrop-blur-sm ", className)}>
+  <div
+    class="absolute top-2 left-2 w-72 h-72 rounded-full blur-3xl background-primary/20"
+  >
+  </div>
+  <div
+    class="absolute top-2 left-2 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl"
+  >
+  </div>
   <h1
     class="text-2xl md:text-4xl font-bold mb-4 text-primary dark:text-white text-center md:text-start">
     Welcome to Dhub Property
