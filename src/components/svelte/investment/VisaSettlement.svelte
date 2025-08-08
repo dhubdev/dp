@@ -194,7 +194,7 @@
           <TabsContent value="considerations" class="space-y-4">
             <Card class="dark:bg-background">
               <CardHeader>
-                <CardTitle class="flex items-center text-amber-700">
+                <CardTitle class="flex items-center text-orange-500">
                   <AlertCircle class="h-6 w-6 mr-2" />
                   Important Considerations
                 </CardTitle>
@@ -202,36 +202,36 @@
               <CardContent class="space-y-4">
                 <div class="space-y-3">
                   <div
-                    class="p-4 bg-amber-50 dark:bg-amber-50/50 rounded-lg border border-amber-200"
+                    class="p-4 bg-amber-50 dark:bg-orange-500/10 rounded-lg border border-amber-200 dark:border-orange-500/80"
                   >
-                    <h4 class="font-semibold text-slate-900 mb-2">
+                    <h4 class="font-semibold dark:text-orange-500 mb-2">
                       Higher Investment Requirement
                     </h4>
-                    <p class="text-slate-600 text-sm">
+                    <p class="text-muted-foreground text-sm">
                       Minimum £200,000 investment required for immigration
                       pathway
                     </p>
                   </div>
 
                   <div
-                    class="p-4 bg-amber-50 rounded-lg border border-amber-200"
+                    class="p-4 bg-amber-50 dark:bg-orange-500/10 rounded-lg border border-amber-200 dark:border-orange-500/80"
                   >
-                    <h4 class="font-semibold text-slate-900 mb-2">
+                    <h4 class="font-semibold dark:text-orange-500 mb-2">
                       Compliance Requirements
                     </h4>
-                    <p class="text-slate-600 text-sm">
+                    <p class="text-muted-foreground text-sm">
                       Must maintain active business operations and meet
                       residency requirements
                     </p>
                   </div>
 
                   <div
-                    class="p-4 bg-amber-50 rounded-lg border border-amber-200"
+                    class="p-4 bg-amber-50 dark:bg-orange-500/10 rounded-lg border border-amber-200 dark:border-orange-500/80"
                   >
-                    <h4 class="font-semibold text-slate-900 mb-2">
+                    <h4 class="font-semibold dark:text-orange-500 mb-2">
                       Long-term Commitment
                     </h4>
-                    <p class="text-slate-600 text-sm">
+                    <p class="text-muted-foreground text-sm">
                       5-year minimum commitment required for citizenship
                       eligibility
                     </p>
