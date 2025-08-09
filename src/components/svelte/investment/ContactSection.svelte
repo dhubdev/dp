@@ -54,7 +54,7 @@
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12">
+    <div class="grid lg:grid-cols-2 gap-8">
       <Card class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10">
         <CardHeader>
           <CardTitle class="text-2xl"
