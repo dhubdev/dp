@@ -7,7 +7,7 @@
 </script>
 
 <section id="investment-options" class="py-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto px-4 md:px-0">
     <div class="text-center mb-16">
       <h2 class="text-3xl lg:text-4xl font-bold mb-4">
         Choose Your Investment Path

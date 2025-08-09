@@ -10,7 +10,7 @@
     <Button
       builders={[builder]}
       variant="ghost"
-      class="bg-white"
+      class="bg-white rounded-full"
       size="icon"
     >
       <AppsIcon />
