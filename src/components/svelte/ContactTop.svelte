@@ -13,7 +13,7 @@
       class="flex items-center gap-2 !p-0 h-full !px-2 text-white"
     >
       <Map class="" />
-      <span class="hidden md:inline-block">5 Union Street, City View House, Manchester M12 4JD UK</span>
+      <span class="hidden lg:inline-block">5 Union Street, City View House, Manchester M12 4JD UK</span>
     </Button>
 
     <div class="flex items-center gap-2">
@@ -23,7 +23,7 @@
         variant="ghost"
       >
         <Phone class="" />
-        <span class="hidden md:inline-block">+44 793 073 9927</span>
+        <span class="hidden lg:inline-block">+44 793 073 9927</span>
       </Button>
       <Button
         variant="ghost"
@@ -31,7 +31,7 @@
         class="flex items-center gap-2 !p-0 h-full !px-2 text-white"
       >
         <Email class="" />
-        <span class="hidden md:inline-block">enquiries@dhubproperty.co.uk</span>
+        <span class="hidden lg:inline-block">enquiries@dhubproperty.co.uk</span>
       </Button>
     </div>
   </div>

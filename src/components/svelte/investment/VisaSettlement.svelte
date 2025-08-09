@@ -30,7 +30,7 @@
     <div class="text-center mb-16">
       <Badge
         variant="outline"
-        class="mb-4 border-2 border-primary text-primary dark:border-white dark:text-white"
+        class="mb-4 border-primary text-primary dark:border-white dark:text-white"
       >
         UK Settlement Opportunity
       </Badge>
@@ -46,7 +46,7 @@
     <div class="grid lg:grid-cols-2 gap-12 items-start">
       <div>
         <Card
-          class="border-2 bg-gradient-to-br from-white to-slate-50 dark:from-primary/50 dark:to-primary/20 border-primary"
+          class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/50 dark:to-primary/20 border-primary"
         >
           <CardHeader>
             <div class="flex items-center space-x-3 mb-4">
@@ -139,14 +139,14 @@
           </TabsList>
 
           <TabsContent value="advantages" class="space-y-4">
-            <Card class="dark:bg-background">
+            <Card class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10">
               <CardHeader>
                 <CardTitle class="flex items-center text-green-700">
                   <CheckCircle class="h-6 w-6 mr-2" />
                   Key Advantages
                 </CardTitle>
               </CardHeader>
-              <CardContent class="space-y-4">
+              <CardContent class="space-y-4 ">
                 <div class="space-y-3">
                   <div class="flex items-center space-x-3">
                     <div class="p-2 bg-green-100 rounded-lg">
@@ -192,7 +192,7 @@
           </TabsContent>
 
           <TabsContent value="considerations" class="space-y-4">
-            <Card class="dark:bg-background">
+            <Card class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10">
               <CardHeader>
                 <CardTitle class="flex items-center text-orange-500">
                   <AlertCircle class="h-6 w-6 mr-2" />

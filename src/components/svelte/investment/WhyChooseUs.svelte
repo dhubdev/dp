@@ -101,9 +101,8 @@
         {@const Icon = feature.icon}
         <Card
           class={cn(
-            "relative border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 dark:bg-background dark:border-muted-foreground/20"
+            "relative hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10"
           )}
-          style="border-color: {hexToRgba(feature.color, 0.2)};"
         >
           <CardHeader class="pb-4">
             <div

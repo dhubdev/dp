@@ -112,8 +112,9 @@
         {#each steps as step, index}
           {@const Icon = step.icon}
           <Card
-            class="relative border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 dark:bg-background dark:border-muted-foreground/20"
-            style="border-color: {hexToRgba(step.color, 0.2)};"
+          class={cn(
+            "relative hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10"
+          )}
           >
             <CardContent class="p-6 text-center">
               <div class="relative mb-4">
@@ -167,10 +168,9 @@
         {#each immigrationSteps as step, index}
           {@const Icon = step.icon}
           <Card
-            class={cn(
-              "relative border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 dark:bg-background dark:border-muted-foreground/20"
-            )}
-            style="border-color: {hexToRgba(step.color, 0.2)};"
+          class={cn(
+            "relative hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10"
+          )}
           >
             <CardContent class="p-6 text-center">
               <div class="relative mb-4">
