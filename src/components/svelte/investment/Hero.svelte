@@ -18,7 +18,7 @@
     <div class="absolute inset-0 bg-repeat" {style}></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-24 lg:py-32">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-0 lg:px-0 py-24 lg:py-32">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div class="space-y-8">
         <div class="space-y-4">
