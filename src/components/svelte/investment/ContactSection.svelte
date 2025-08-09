@@ -55,7 +55,7 @@
     </div>
 
     <div class="grid lg:grid-cols-2 gap-12">
-      <Card class="dark:bg-background">
+      <Card class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10">
         <CardHeader>
           <CardTitle class="text-2xl"
             >Request Consultation</CardTitle
@@ -156,7 +156,7 @@
       </Card>
 
       <div class="space-y-8">
-        <Card class="dark:bg-background">
+        <Card class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10">
           <CardHeader>
             <CardTitle class="text-2xl"
               >Contact Information</CardTitle
@@ -215,15 +215,15 @@
         </Card>
 
         <Card
-          class="bg-gradient-to-br from-primary to-primary/70 dark:from-primary/30 dark:to-primary/10 dark:text-white"
+          class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10"
         >
           <CardContent class="p-6">
-            <h3 class="text-xl font-bold mb-4 text-white">Emergency Support</h3>
-            <p class="text-white mb-4">
+            <h3 class="text-xl font-bold mb-4">Emergency Support</h3>
+            <p class="mb-4">
               For urgent matters regarding active investments, our emergency
               support line is available 24/7.
             </p>
-            <a href="tel:+447930739927" class="flex items-center space-x-3 text-white">
+            <a href="tel:+447930739927" class="flex items-center space-x-3">
               <Phone class="h-5 w-5" />
               <span class="font-semibold">+44 79 3073 9927</span>
             </a>

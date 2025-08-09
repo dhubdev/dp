@@ -20,7 +20,7 @@
 
     <div class="grid lg:grid-cols-2 gap-8">
       <Card
-        class="relative overflow-hidden border-2 transition-all duration-300 hover:shadow-xl border-primary" 
+        class="relative overflow-hidden transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10" 
       >
         <div class="absolute top-4 right-4">
           <Badge
@@ -117,7 +117,7 @@
       </Card>
 
       <Card
-        class="relative overflow-hidden border-2 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl"
+        class="relative overflow-hidden transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10"
       >
         <div class="absolute top-4 right-4">
           <Badge variant="secondary" class="bg-emerald-100 text-emerald-800">
