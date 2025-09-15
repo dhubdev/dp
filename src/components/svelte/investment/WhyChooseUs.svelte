@@ -38,12 +38,19 @@
 
     return `rgba(${r}, ${g}, ${b}, ${opacity})`;
   };
+
+  const scrollToContact = () => {
+    document
+      .querySelector("section:last-of-type")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const features = [
     {
       icon: Shield,
       title: "Proven Track Record",
       description:
-        "Over £2M in successful property transactions with consistent returns for our investors",
+        "Over £50M in successful property transactions with consistent returns for our investors",
       color: "#055648",
     },
     {
@@ -132,15 +139,16 @@
         Ready to Start Your Investment Journey?
       </h3>
       <p class="text-xl mb-6 opacity-90">
-        Join hundreds of successful investors who have trusted us with their
+        Join over 1000 successful investors who have trusted us with their
         property investments
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <Button
           class="bg-white rounded-lg font-semibold hover:bg-gray-100 transition-colors text-primary"
+          on:click={scrollToContact}
         >
           Schedule Free Consultation
-      </Button>
+        </Button>
         <Button>Download Investment Guide</Button>
       </div>
     </div>
