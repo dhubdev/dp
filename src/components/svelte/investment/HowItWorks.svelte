@@ -9,58 +9,104 @@
     Search,
     TrendingUp,
     Users,
+    Package,
+    Shield,
   } from "lucide-svelte";
 
   const steps = [
     {
       icon: FileCheck,
-      title: "Initial Consultation",
+      title: "Consultation",
       description:
         "We assess your investment goals and determine the best path forward",
       color: "#055648",
+    },
+    {
+      icon: Package,
+      title: "Pick Type Package",
+      description:
+        "Choose between Part Investment, Solo Investment, or Buy to Rent based on your preferences",
+      color: "#10b981",
     },
     {
       icon: Search,
       title: "Property Sourcing",
       description:
         "Our experts identify high-potential properties in prime locations",
-      color: "#10b981",
+      color: "#f97316",
     },
     {
       icon: Hammer,
       title: "Renovation & Development",
       description:
         "Professional renovation to maximize property value and appeal",
-      color: "#f97316",
+      color: "#8b5cf6",
     },
     {
       icon: TrendingUp,
-      title: "Sale & Returns",
+      title: "Sales & Returns",
       description: "Strategic marketing and sale to deliver optimal returns",
-      color: "#8b5cf6",
+      color: "#ef4444",
     },
   ];
 
   const immigrationSteps = [
     {
       icon: FileCheck,
+      title: "Consultation",
+      description: "Initial assessment of your immigration and investment goals",
+      color: "#055648",
+    },
+    {
+      icon: Package,
+      title: "Pick Type Package",
+      description: "Select the UK Settlement Package that fits your needs",
+      color: "#10b981",
+    },
+    {
+      icon: Users,
       title: "Company Formation",
       description: "Establish your UK property investment company",
-      color: "#055648",
+      color: "#f97316",
+    },
+    {
+      icon: Search,
+      title: "Property Sourcing",
+      description: "Identify and acquire suitable investment properties",
+      color: "#8b5cf6",
+    },
+    {
+      icon: Shield,
+      title: "Sponsorship License",
+      description: "Obtain sponsorship license for your business",
+      color: "#ef4444",
     },
     {
       icon: MapPin,
       title: "Visa Application",
       description: "Submit investor visa application with our support",
-      color: "#10b981",
+      color: "#6366f1",
     },
     {
-      icon: Users,
+      icon: FileCheck,
       title: "Ongoing Compliance",
       description: "Maintain requirements for residency and citizenship",
-      color: "#f97316",
+      color: "#ec4899",
+    },
+    {
+      icon: Hammer,
+      title: "Renovation & Development",
+      description: "Professional renovation of your investment properties",
+      color: "#14b8a6",
+    },
+    {
+      icon: TrendingUp,
+      title: "Sales & Returns",
+      description: "Generate returns while maintaining immigration compliance",
+      color: "#f59e0b",
     },
   ];
+
   const hexToRgba = (hex: string, opacity: number): string => {
     // Remove leading # if present
     hex = hex.replace(/^#/, "");
@@ -101,14 +147,14 @@
           variant="outline"
           class="mb-4 border-2 text-primary border-primary dark:text-white dark:border-white"
         >
-          Property Investment Process
+          Other Investment Paths
         </Badge>
         <h3 class="text-2xl font-bold text-slate-900">
           From Investment to Returns
         </h3>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
         {#each steps as step, index}
           {@const Icon = step.icon}
           <Card
@@ -157,14 +203,14 @@
           variant="outline"
           class="text-emerald-600 border-emerald-200 mb-4"
         >
-          UK Settlement Process
+          The Path to UK Citizenship
         </Badge>
         <h3 class="text-2xl font-bold text-slate-900">
-          Path to UK Citizenship
+          Complete UK Settlement Process
         </h3>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {#each immigrationSteps as step, index}
           {@const Icon = step.icon}
           <Card

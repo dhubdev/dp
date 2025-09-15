@@ -10,14 +10,6 @@
   import { Textarea } from "$lib/components/ui/textarea";
   import { Clock, Mail, MapPin, Phone } from "lucide-svelte";
 
-  const fruits = [
-    { value: "apple", label: "Apple" },
-    { value: "banana", label: "Banana" },
-    { value: "blueberry", label: "Blueberry" },
-    { value: "grapes", label: "Grapes" },
-    { value: "pineapple", label: "Pineapple" },
-  ];
-
   const hexToRgba = (hex: string, opacity: number): string => {
     // Remove leading # if present
     hex = hex.replace(/^#/, "");
@@ -62,30 +54,11 @@
           >
         </CardHeader>
         <CardContent class="space-y-6">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="space-y-2">
-              <label for="firstName" class="text-sm font-medium text-muted-foreground"
-                >First Name</label
-              >
-              <Input name="firstName" placeholder="Enter your first name" />
-            </div>
-            <div class="space-y-2">
-              <label for="lastName" class="text-sm font-medium text-muted-foreground"
-                >Last Name</label
-              >
-              <Input name="lastName" placeholder="Enter your last name" />
-            </div>
-          </div>
-
           <div class="space-y-2">
-            <label for="email" class="text-sm font-medium text-muted-foreground"
-              >Email Address</label
+            <label for="name" class="text-sm font-medium text-muted-foreground"
+              >Full Name</label
             >
-            <Input
-              name="email"
-              type="email"
-              placeholder="Enter your email address"
-            />
+            <Input name="name" placeholder="Enter your full name" />
           </div>
 
           <div class="space-y-2">
@@ -100,37 +73,41 @@
           </div>
 
           <div class="space-y-2">
-            <label
-              for="investmentInterest"
-              class="text-sm font-medium text-muted-foreground"
-              >Investment Interest</label
+            <label for="email" class="text-sm font-medium text-muted-foreground"
+              >Email Address</label
             >
-            <select name="investmentInterest">
+            <Input
+              name="email"
+              type="email"
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label for="country" class="text-sm font-medium text-muted-foreground"
+              >Country</label
+            >
+            <Input
+              name="country"
+              placeholder="Enter your country"
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label
+              for="investmentType"
+              class="text-sm font-medium text-muted-foreground"
+              >Investment Type</label
+            >
+            <select name="investmentType" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
               <option value="" disabled selected
                 >Select your investment type</option
               >
               <option value="part-investment">Part Investment</option>
               <option value="solo-investment">Solo Investment</option>
+              <option value="buy-to-rent">Buy to Rent Investment</option>
               <option value="uk-settlement">UK Settlement Package</option>
               <option value="general-inquiry">General Inquiry</option>
-            </select>
-          </div>
-
-          <div class="space-y-2">
-            <label
-              for="investmentBudget"
-              class="text-sm font-medium text-muted-foreground"
-              >Investment Budget</label
-            >
-            <select name="investmentBudget">
-              <option value="" disabled selected
-                >Select your budget range</option
-              >
-              <option value="25k-50k">£25,000 - £50,000</option>
-              <option value="50k-100k">£50,000 - £100,000</option>
-              <option value="100k-200k">£100,000 - £200,000</option>
-              <option value="200k-500k">£200,000 - £500,000</option>
-              <option value="500k-plus">£500,000+</option>
             </select>
           </div>
 

@@ -23,6 +23,12 @@
     MapPin,
     Users,
   } from "lucide-svelte"; 
+
+  const scrollToContact = () => {
+    document
+      .querySelector("section:last-of-type")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 </script>
 
 <section class="py-20">
@@ -39,7 +45,7 @@
       </h2>
       <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
         Combine your property investment with a pathway to UK residency and
-        citizenship. We handle both the investment and immigration process.
+        citizenship. We handle both the investment and immigration process for self-employed individuals using property investment as a business to sponsor yourself to the UK.
       </p>
     </div>
 
@@ -58,7 +64,7 @@
                   >UK Settlement Package</CardTitle
                 >
                 <CardDescription class="text-muted-foreground">
-                  Investment + Immigration Support
+                  Investment + Immigration Support (Self-Employed)
                 </CardDescription>
               </div>
             </div>
@@ -67,7 +73,7 @@
             <p class="text-muted-foreground leading-relaxed">
               Open a property company in the UK and be recognized as an
               investor. Within 5 years, you can become eligible for UK
-              citizenship while building your property portfolio.
+              citizenship while building your property portfolio as a self-employed individual sponsoring yourself.
             </p>
 
             <div class="space-y-4">
@@ -87,6 +93,12 @@
                     class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0 bg-primary"
                   ></div>
                   Property investment management
+                </li>
+                <li class="flex items-start">
+                  <div
+                    class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0 bg-primary"
+                  ></div>
+                  Sponsorship license assistance
                 </li>
                 <li class="flex items-start">
                   <div
@@ -118,13 +130,13 @@
               </div>
               <div class="flex items-center justify-between text-primary dark:text-green-600">
                 <span class="text-sm font-medium"
-                  >Minimum Investment</span
+                  >Investment Range</span
                 >
-                <span class="text-lg font-bold">£200,000</span>
+                <span class="text-lg font-bold">£100,000 - £250,000</span>
               </div>
             </div>
 
-            <Button class="w-full text-white hover:opacity-90 bg-primary">
+            <Button class="w-full text-white hover:opacity-90 bg-primary" on:click={scrollToContact}>
               Schedule Immigration Consultation
             </Button>
           </CardContent>
@@ -156,7 +168,7 @@
                       <h4 class="font-semibold">Dual Benefit</h4>
                       <p class="text-muted-foreground text-sm">
                         Generate investment returns while building towards UK
-                        residency
+                        residency as a self-employed investor
                       </p>
                     </div>
                   </div>
@@ -168,7 +180,7 @@
                     <div>
                       <h4 class="font-semibold">Full Support</h4>
                       <p class="text-muted-foreground text-sm">
-                        Complete immigration and investment management
+                        Complete immigration and investment management including sponsorship license
                       </p>
                     </div>
                   </div>
@@ -182,7 +194,7 @@
                         Clear Timeline
                       </h4>
                       <p class="text-muted-foreground text-sm">
-                        Structured 5-year pathway to citizenship
+                        Structured 5-year pathway to citizenship through business investment
                       </p>
                     </div>
                   </div>
@@ -208,8 +220,8 @@
                       Higher Investment Requirement
                     </h4>
                     <p class="text-muted-foreground text-sm">
-                      Minimum £200,000 investment required for immigration
-                      pathway
+                      Investment range £100,000 - £250,000 required for immigration
+                      pathway and business establishment
                     </p>
                   </div>
 
@@ -220,7 +232,7 @@
                       Compliance Requirements
                     </h4>
                     <p class="text-muted-foreground text-sm">
-                      Must maintain active business operations and meet
+                      Must maintain active business operations, sponsorship license, and meet
                       residency requirements
                     </p>
                   </div>
@@ -233,7 +245,7 @@
                     </h4>
                     <p class="text-muted-foreground text-sm">
                       5-year minimum commitment required for citizenship
-                      eligibility
+                      eligibility as self-employed investor
                     </p>
                   </div>
                 </div>

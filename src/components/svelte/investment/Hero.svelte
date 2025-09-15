@@ -9,6 +9,12 @@
       .getElementById("investment-options")
       ?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const scrollToContact = () => {
+    document
+      .querySelector("section:last-of-type")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 </script>
 
 <section
@@ -50,6 +56,7 @@
             variant="outline"
             size="lg"
             class="border-slate-400 px-8 py-3 text-lg"
+            on:click={scrollToContact}
           >
             Schedule Consultation
           </Button>
@@ -57,15 +64,15 @@
 
         <div class="grid grid-cols-3 gap-8 pt-8 border-t border-muted-foreground/20">
           <div class="text-center">
-            <div class="text-2xl font-bold text-primary">£2M+</div>
+            <div class="text-2xl font-bold text-primary">£50M+</div>
             <div class="text-sm text-slate-400">Properties Sold</div>
           </div>
           <div class="text-center">
-            <div class="text-2xl font-bold text-emerald-400">500+</div>
+            <div class="text-2xl font-bold text-emerald-400">100+</div>
             <div class="text-sm text-slate-400">Happy Investors</div>
           </div>
           <div class="text-center">
-            <div class="text-2xl font-bold text-yellow-400">25%</div>
+            <div class="text-2xl font-bold text-yellow-400">15-35%</div>
             <div class="text-sm text-slate-400">Average ROI</div>
           </div>
         </div>
