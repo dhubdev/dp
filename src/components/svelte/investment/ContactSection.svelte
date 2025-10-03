@@ -9,6 +9,9 @@
   import { Input } from "$lib/components/ui/input";
   import { Textarea } from "$lib/components/ui/textarea";
   import { Clock, Mail, MapPin, Phone } from "lucide-svelte";
+  import { toast } from "svelte-sonner";
+
+  $: loading = false;
 
   const hexToRgba = (hex: string, opacity: number): string => {
     // Remove leading # if present
@@ -32,14 +35,41 @@
 
     return `rgba(${r}, ${g}, ${b}, ${opacity})`;
   };
+
+  const onsubmit = async (evt: SubmitEvent) => {
+    evt.preventDefault();
+    const form = evt.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const entries = Object.fromEntries(formData.entries());
+
+    try {
+      loading = true;
+      const options: RequestInit = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...entries }),
+      };
+      const url = "/api/investment";
+      const response = await fetch(url, options);
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log({ data });
+      }
+    } catch (error: any) {
+      toast.error("Error Alert", { description: error.message });
+    } finally {
+      loading = false;
+    }
+  };
 </script>
 
 <section class="py-20">
   <div class="max-w-7xl mx-auto px-4 md:px-0">
     <div class="text-center mb-16">
-      <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-        Get Started Today
-      </h2>
+      <h2 class="text-3xl lg:text-4xl font-bold mb-4">Get Started Today</h2>
       <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
         Ready to begin your property investment journey? Contact our experts for
         a personalized consultation.
@@ -47,104 +77,125 @@
     </div>
 
     <div class="grid lg:grid-cols-2 gap-8">
-      <Card class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10">
+      <Card
+        class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10"
+      >
         <CardHeader>
-          <CardTitle class="text-2xl"
-            >Request Consultation</CardTitle
-          >
+          <CardTitle class="text-2xl">Request Consultation</CardTitle>
         </CardHeader>
-        <CardContent class="space-y-6">
-          <div class="space-y-2">
-            <label for="name" class="text-sm font-medium text-muted-foreground"
-              >Full Name</label
-            >
-            <Input name="name" placeholder="Enter your full name" />
-          </div>
-
-          <div class="space-y-2">
-            <label for="phone" class="text-sm font-medium text-muted-foreground"
-              >Phone Number</label
-            >
-            <Input
-              name="phone"
-              type="tel"
-              placeholder="Enter your phone number"
-            />
-          </div>
-
-          <div class="space-y-2">
-            <label for="email" class="text-sm font-medium text-muted-foreground"
-              >Email Address</label
-            >
-            <Input
-              name="email"
-              type="email"
-              placeholder="Enter your email address"
-            />
-          </div>
-
-          <div class="space-y-2">
-            <label for="country" class="text-sm font-medium text-muted-foreground"
-              >Country</label
-            >
-            <Input
-              name="country"
-              placeholder="Enter your country"
-            />
-          </div>
-
-          <div class="space-y-2">
-            <label
-              for="investmentType"
-              class="text-sm font-medium text-muted-foreground"
-              >Investment Type</label
-            >
-            <select name="investmentType" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-              <option value="" disabled selected
-                >Select your investment type</option
+        <CardContent class="w-full">
+          <form on:submit={onsubmit} class="space-y-6 w-full">
+            <div class="space-y-2">
+              <label
+                for="name"
+                class="text-sm font-medium text-muted-foreground"
+                >Full Name</label
               >
-              <option value="part-investment">Part Investment</option>
-              <option value="solo-investment">Solo Investment</option>
-              <option value="buy-to-rent">Buy to Rent Investment</option>
-              <option value="uk-settlement">UK Settlement Package</option>
-              <option value="general-inquiry">General Inquiry</option>
-            </select>
-          </div>
+              <Input name="name" placeholder="Enter your full name" />
+            </div>
 
-          <div class="space-y-2">
-            <label for="message" class="text-sm font-medium text-muted-foreground"
-              >Message</label
-            >
-            <Textarea
-              name="message"
-              placeholder="Tell us about your investment goals and any questions you have..."
-              rows={4}
-            />
-          </div>
+            <div class="space-y-2">
+              <label
+                for="phone"
+                class="text-sm font-medium text-muted-foreground"
+                >Phone Number</label
+              >
+              <Input
+                name="phone"
+                type="tel"
+                placeholder="Enter your phone number"
+              />
+            </div>
 
-          <Button class="w-full text-white py-3 hover:opacity-90 bg-primary">
-            Schedule Free Consultation
-          </Button>
+            <div class="space-y-2">
+              <label
+                for="email"
+                class="text-sm font-medium text-muted-foreground"
+                >Email Address</label
+              >
+              <Input
+                name="email"
+                type="email"
+                placeholder="Enter your email address"
+              />
+            </div>
 
-          <p class="text-sm text-muted-foreground text-center">
-            We'll respond within 24 hours to schedule your consultation
-          </p>
+            <div class="space-y-2">
+              <label
+                for="country"
+                class="text-sm font-medium text-muted-foreground">Country</label
+              >
+              <Input name="country" placeholder="Enter your country" />
+            </div>
+
+            <div class="space-y-2">
+              <label
+                for="investmentType"
+                class="text-sm font-medium text-muted-foreground"
+                >Investment Type</label
+              >
+              <select
+                name="investmentType"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              >
+                <option value="" disabled selected
+                  >Select your investment type</option
+                >
+                <option value="part-investment">Part Investment</option>
+                <option value="solo-investment">Solo Investment</option>
+                <option value="buy-to-rent">Buy to Rent Investment</option>
+                <option value="uk-settlement">UK Settlement Package</option>
+                <option value="general-inquiry">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label
+                for="message"
+                class="text-sm font-medium text-muted-foreground">Message</label
+              >
+              <Textarea
+                name="message"
+                placeholder="Tell us about your investment goals and any questions you have..."
+                rows={4}
+              />
+            </div>
+
+            {#if loading}
+              <Button
+                disabled={loading}
+                class="w-full text-white py-3 hover:opacity-90 bg-primary"
+              >
+                Loading...
+              </Button>
+            {:else}
+              <Button
+                disabled={loading}
+                type="submit"
+                class="w-full text-white py-3 hover:opacity-90 bg-primary"
+              >
+                Schedule Free Consultation
+              </Button>
+            {/if}
+
+            <p class="text-sm text-muted-foreground text-center">
+              We'll respond within 24 hours to schedule your consultation
+            </p>
+          </form>
         </CardContent>
       </Card>
 
       <div class="space-y-8">
-        <Card class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10">
+        <Card
+          class="bg-gradient-to-br from-white to-slate-50 dark:from-primary/30 dark:to-primary/10"
+        >
           <CardHeader>
-            <CardTitle class="text-2xl"
-              >Contact Information</CardTitle
-            >
+            <CardTitle class="text-2xl">Contact Information</CardTitle>
           </CardHeader>
           <CardContent class="space-y-6">
             <div class="flex items-start space-x-4">
-              <div
-                class="p-3 bg-primary/10 rounded-lg"
-              >
-                <Phone class="h-6 w-6 text-primary"/>
+              <div class="p-3 bg-primary/10 rounded-lg">
+                <Phone class="h-6 w-6 text-primary" />
               </div>
               <div>
                 <h4 class="font-semibold">Phone</h4>
@@ -171,7 +222,7 @@
               <div>
                 <h4 class="font-semibold">Office</h4>
                 <p class="text-muted-foreground">
-                  5 Union Street, City View House<br/> Manchester M12 4JD UK
+                  5 Union Street, City View House<br /> Manchester M12 4JD UK
                 </p>
                 <p class="text-sm text-slate-500">By appointment only</p>
               </div>
@@ -183,8 +234,12 @@
               </div>
               <div>
                 <h4 class="font-semibold">Business Hours</h4>
-                <p class="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p class="text-muted-foreground">Saturday: 10:00 AM - 4:00 PM</p>
+                <p class="text-muted-foreground">
+                  Monday - Friday: 9:00 AM - 6:00 PM
+                </p>
+                <p class="text-muted-foreground">
+                  Saturday: 10:00 AM - 4:00 PM
+                </p>
                 <p class="text-muted-foreground">Sunday: Closed</p>
               </div>
             </div>

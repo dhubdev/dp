@@ -28,7 +28,8 @@ export enum Collection {
   CHECKOUT = 'checkout',
   NEWSLETTER = 'newsletter',
   CONTACT = 'contact',
-  GETINVOLVED = 'get-involved'
+  GETINVOLVED = 'get-involved',
+  INVESTMENT = 'investment'
 }
 
 export enum Actions {
