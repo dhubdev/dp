@@ -55,9 +55,9 @@
       const response = await fetch(url, options);
 
       if (response.ok) {
-        const data = await response.json();
-        console.log({ data });
+        const data = await response.json(); 
         toast.success("Success Alert", { description: data.message })
+        form.reset()
       }
     } catch (error: any) {
       toast.error("Error Alert", { description: error.message });
