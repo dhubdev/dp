@@ -57,6 +57,7 @@
       if (response.ok) {
         const data = await response.json();
         console.log({ data });
+        toast.success("Success Alert", { description: data.message })
       }
     } catch (error: any) {
       toast.error("Error Alert", { description: error.message });
